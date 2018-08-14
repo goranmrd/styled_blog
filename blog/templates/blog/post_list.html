@@ -16,5 +16,6 @@
             <p>{{ post.text| markdown | safe | linebreaksbr | truncatewords:50}}</p>
         </div>
 		<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+		<hr>
     {% endfor %}
 {% endblock %}
