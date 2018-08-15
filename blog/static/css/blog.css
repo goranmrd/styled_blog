@@ -1,14 +1,27 @@
-.page-header {
-    background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+
+.navbar-header {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.top-menu-hello {
+	float:left !important;
+	margin-top: 10px;
+	color: #03a87c;
+    font-size: 16pt;
+	
 }
 
-.page-header h1, .page-header h1 a{
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
+.content {
+	margin-top:30px;
 }
+
+.navbar-brand {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 h1, h2, h3, h4 {
     font-family: 'Tangerine', 'Inconsolata', 'Droid Sans', serif;
@@ -36,10 +49,24 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover {
-    color: #ffffff;
+    color: #03a87c !important;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    font-size: 16pt;
+    margin-right: 5px !important;
+}
+.logout {
+	border: 1px solid #03a87c;
+	border-radius: 4px;
+	float:right;
+	margin-right: 20px;
+	padding: 4px 8px;
+	color: #03a87c;
+	font-size: 16pt;
+	margin-top: 3px;
+
+}
+.logout a {
+	color: #03a87c;
 }
 
 .comment {
@@ -55,7 +82,7 @@ h1, h2, h3, h4 {
 }
 
 .comment-input:focus {
-    max-height: 7rem;
+	max-height: 7rem;
 }
 
 .bg-light {
@@ -66,4 +93,31 @@ h1, h2, h3, h4 {
 img {
     display: block;
     max-width: 100%;
+}
+
+.waiting-approval, .waiting-approval .date {
+	color:#C0C0C0 !important;
+}
+.fa-edit {
+	color: #339af0
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.fa-edit:hover {
+	
+	color:#0a5fa6;
+}
+
+.navbar-toggler {
+	float:right;
+}
+
+@media screen and (max-width: 700px) {
+  .top-menu-hello {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
 }
