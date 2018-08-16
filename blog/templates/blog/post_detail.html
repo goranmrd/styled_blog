@@ -47,7 +47,7 @@
 				<form action="{% url 'add_comment_to_post' pk=post.pk %}" class="post-form-blog" method="post">
 					{% csrf_token %}
 					{{ form.as_p }}
-					<button type="submit" class="btn btn-primary" onclick="focusOn()">Post</button>
+					<small><strong>- You can use markdown in comments too...</strong></small> <button type="submit" class="btn btn-primary" onclick="focusOn()">Post</button>
 				</form>
 			</div>
 		</div>
