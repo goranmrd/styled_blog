@@ -29,5 +29,9 @@
 		$(this).summernote('destroy');
 		});
 		}
+	$(window).on('shown.bs.modal',function(e){
+		$('.modal-footer p').remove();
+	})
+	
 	</script>	
 {% endblock %}
