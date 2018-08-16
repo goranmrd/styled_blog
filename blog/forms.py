@@ -13,6 +13,10 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'text')
+        widgets = {
+            "text":forms.Textarea(attrs={'name':'editordata','placeholder':'You can use markdown here...','class':'summernote'}),
+            
+        }
 
 
 class CommentForm(forms.ModelForm):
