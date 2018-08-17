@@ -1,9 +1,9 @@
-
 .navbar-header {
     float: left;
     text-align: center;
     width: 100%;
 }
+
 .top-menu-hello {
 	float:left !important;
 	margin-top: 10px;
@@ -14,12 +14,6 @@
 
 .content {
 	margin-top:30px;
-}
-
-.navbar-brand {
-	position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 
@@ -54,20 +48,7 @@ h1, h2, h3, h4 {
     font-size: 16pt;
     margin-right: 5px !important;
 }
-.logout {
-	border: 1px solid #03a87c;
-	border-radius: 4px;
-	float:right;
-	margin-right: 20px;
-	padding: 4px 8px;
-	color: #03a87c;
-	font-size: 16pt;
-	margin-top: 3px;
 
-}
-.logout a {
-	color: #03a87c;
-}
 
 .comment {
     margin: 20px 0px 20px 20px;
@@ -109,9 +90,16 @@ img {
 
 .navbar-toggler {
 	float:right;
+	margin-top: 10px;
 }
 
-@media screen and (max-width: 700px) {
+.btn-outline-success {
+	margin: 10px 10px;
+	float:right;
+}
+
+
+@media screen and (max-width: 780px) {
   .top-menu-hello {
     visibility: hidden;
     clear: both;
@@ -120,8 +108,4 @@ img {
     width: 28%;
     display: none;
   }
-}
-
-.note-editor .note-editable {
-    line-height: 1;
 }
