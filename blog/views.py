@@ -17,8 +17,7 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    form = CommentForm()
-    stuff_for_frontend = {'post': post, 'form':form}
+    stuff_for_frontend = {'post': post}
     return render(request, 'blog/post_detail.html', stuff_for_frontend)
 
 

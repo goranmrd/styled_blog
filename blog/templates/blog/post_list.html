@@ -9,13 +9,13 @@
         <div class="post">
 
             <div class="date">
-                <p>Published: {{ post.published_date }} by <strong>{{post.author}}</strong></p>
+                <p>Published: {{ post.published_date }}</p>
             </div>
 
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text| markdown | safe | linebreaksbr | truncatewords:50}}</p>
+            <p>{{ post.text| markdown | safe | linebreaksbr }}</p>
+
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
         </div>
-		<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
-		<hr>
     {% endfor %}
 {% endblock %}

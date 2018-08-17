@@ -7,21 +7,12 @@ from crispy_forms.layout import Submit
 
 
 class PostForm(forms.ModelForm):
-    helper = FormHelper()
-    helper.form_method = 'POST'
-    helper.add_input(Submit('Save', 'Save', css_class='btn-primary'))
     class Meta:
         model = Post
         fields = ('title', 'text')
-        widgets = {
-            "text":forms.Textarea(attrs={'name':'editordata','placeholder':'You can use markdown here...','class':'summernote'}),
-            
-        }
 
 
 class CommentForm(forms.ModelForm):
-    text = forms.CharField(widget=forms.Textarea(attrs={'class':'comment-input', 'placeholder': 'Add a comment...'}), label='')
-    
     class Meta:
         model = Comment
         fields = ('text',)
