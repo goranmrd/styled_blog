@@ -22,7 +22,21 @@
       $('.summernote').summernote({
         tabsize: 2,
         height: 200,
-		placeholder: 'This is visual editor...'
+		placeholder: 'This is visual editor...',
+		toolbar: [
+			['style', ['style']],
+			['font', ['bold', 'italic', 'underline', 'clear']],
+			// ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
+			['fontname', ['fontname']],
+			['fontsize', ['fontsize']],
+			['color', ['color']],
+			['para', ['ul', 'ol', 'paragraph']],
+			['height', ['height']],
+			['table', ['table']],
+			['insert', ['link', 'picture', 'hr']],
+			['view', ['fullscreen'/* 'codeview' */]],   // remove codeview button
+			//['help', [/*'help'*/]]
+		  ]
 		});
 		$('.summernote').empty();
 		}
@@ -33,10 +47,10 @@
 		});
 		$('.summernote').empty();
 		}
-	// To remove links from Visual editor help modal 
+	/* To remove links from Visual editor help modal 
 	$(window).on('shown.bs.modal',function(e){
 		$('.modal-footer p').remove();
-	})
+	})*/
 	
 	</script>	
 {% endblock %}
