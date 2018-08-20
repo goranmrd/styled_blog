@@ -109,3 +109,7 @@ img {
     display: none;
   }
 }
+
+.note-editable b, .note-editable strong {
+font-weight: bold;
+}
