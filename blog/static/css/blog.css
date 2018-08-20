@@ -99,14 +99,15 @@ img {
 }
 
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 992px) {
   .top-menu-hello {
-    visibility: hidden;
+    /*visibility: hidden;
     clear: both;
     float: left;
     margin: 10px auto 5px 20px;
     width: 28%;
-    display: none;
+    display: none;*/
+	margin: 0 auto;
   }
 }
 
