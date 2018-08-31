@@ -17,19 +17,19 @@
       <div class="col-md-3"></div>
       <div class="col-md-6">
         <h1>Log In</h1>
-    <form class="form-horizontal" method="post">{% csrf_token %}
+    		<form class="form-horizontal" method="post">{% csrf_token %}
                 <fieldset>
                     <legend>{{ title }}</legend>
-                    {% for field in form %}
-                        {% if field.errors %}
+			{% if form.errors %}
+				<p>Incorect username or password.</p>
+                    	{% for field in form %}
                             <div class="form-group">
                                 <label>{{ field.label }}</label>
                                 {{ field }}
-                                <span class="help-inline">
-                                    {% for error in  field.errors %}{{ error }}{% endfor %}
-                                </span>
                             </div>
+			{% endfor %}
                         {% else %}
+			{% for field in form %}
                             <div class="form-group">
                                 <label>{{ field.label }}</label>
                                 {{ field }}
@@ -37,15 +37,15 @@
                                     <p class="help-inline"><small>{{ field.help_text|safe }}</small></p>
                                 {% endif %}
                             </div>
-                        {% endif %}
-                    {% endfor %}
+                    	{% endfor %}
+			{% endif %}
                 </fieldset>
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary login" >Login</button>
                 </div>
             </form>
-			<hr>
-			<p>Don't have an account? <a href="{% url 'signup' %}">Sign Up Here</a></p>
+		<hr>
+		<p>Don't have an account? <a href="{% url 'signup' %}">Sign Up Here</a></p>
     </div>
   </div>
 
