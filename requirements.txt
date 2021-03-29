@@ -10,7 +10,7 @@ idna==2.7
 Markdown==2.6.11
 mistune==0.8.3
 psycopg2==2.7.5
-Pygments==2.2.0
+Pygments==2.7.4
 python-dateutil==1.5
 pytz==2018.5
 requests==2.20.0
